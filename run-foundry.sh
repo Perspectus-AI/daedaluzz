@@ -1,11 +1,11 @@
-#!/bin/ash
-cd /daedaluzz
+#!/bin/bash
+# cd /daedaluzz
 rm -rf foundry-tmp/task-$1
 mkdir foundry-tmp/task-$1
 cd foundry-tmp/task-$1
 forge init --no-git foundry-project
 cd foundry-project
-cp /daedaluzz/generated-mazes/maze-$3.foundry.sol test/maze-$3.t.sol
+cp /generated-mazes/maze-$3.foundry.sol test/maze-$3.t.sol
 cp foundry.toml foundry.original.toml
 forge build
 
